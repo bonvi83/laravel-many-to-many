@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TypeController;
+use App\Http\Controllers\TechnologyController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 
 use App\Http\Controllers\Guest\DashboardController as GuestDashboardController;
@@ -33,12 +34,12 @@ Route::middleware('auth')
       ->name('dashboard');
 
     // rotta risorsa Project
-
     Route::resource('projects', ProjectController::class);
     
     // rotta risorsa Type
     Route::resource('types', TypeController::class);
 
+    Route::resource('projects', TechnologyController::class);
   });
 
 require __DIR__ . '/auth.php';

@@ -25,7 +25,9 @@ class ProjectTechnologySeeder extends Seeder
         // $project->technologies()->detach([2,3]);    così rimane solo il 5
     
         foreach ($projects as $project) {
-            $projects->technologies()->sync($technologies);
+            $project
+                ->technologies()
+                ->attach($faker->randomElements($technologies, random_int(0, 3)));
         }
     }
 }
