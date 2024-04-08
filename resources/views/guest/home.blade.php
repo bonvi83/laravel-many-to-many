@@ -11,7 +11,7 @@
 
 <div class="content">
     <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis accusamus dolores!</p>
+        <p>Breve descrizione di quello che la vita ha da offrire...</p>
     </div>
 </div>
 @endsection

@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// # Rotte pubbliche
+// Rotte pubbliche
 Route::get('/', [GuestDashboardController::class, 'index'])
   ->name('home');
 
-// # Rotte protette
+// Rotte protette
 Route::middleware('auth')
   ->prefix('/admin')
   ->name('admin.')
@@ -32,11 +32,11 @@ Route::middleware('auth')
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])
       ->name('dashboard');
 
-    //rotta risorsa Project
+    // rotta risorsa Project
 
     Route::resource('projects', ProjectController::class);
     
-    //rotta risorsa Type
+    // rotta risorsa Type
     Route::resource('types', TypeController::class);
 
   });
