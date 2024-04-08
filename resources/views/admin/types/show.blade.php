@@ -12,7 +12,7 @@
             <h1>{{ $type->label }}</h1>
             <p>{{ $type->color }}</p>
             <p>{!! $type->getBadge() !!}</p>
-             
+
             <h3 class="mt-5">Progetti correlati</h3>
             <table class="table">
                 <thead>

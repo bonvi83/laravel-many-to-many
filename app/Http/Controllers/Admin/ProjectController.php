@@ -86,7 +86,7 @@ class ProjectController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Project  $project
-    //  * @return \Illuminate\Http\Response
+    // @return \Illuminate\Http\Response
      */
     public function update(Request $request, Project $project)
     {
@@ -100,7 +100,7 @@ class ProjectController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Project  $project
-    //  * @return \Illuminate\Http\Response
+    // @return \Illuminate\Http\Response
      */
     public function destroy(Project $project)
     {

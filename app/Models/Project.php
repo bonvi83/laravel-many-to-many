@@ -25,4 +25,8 @@ class Project extends Model
     public function technologies(){
         return $this->belongsToMany(Technology::class);
     }
+
+    public function getTechArray(){
+        return $this->technologies->pluck('id')->toArray();
+    }
 }
