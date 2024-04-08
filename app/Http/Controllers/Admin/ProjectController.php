@@ -114,26 +114,23 @@ class ProjectController extends Controller
             $data,
             [
               //... regole di validazione
-              'title' => 'required|string|max:150',
-              'type_id' => 'required',
-              'content' => 'required|max:300',
-              'link' => 'required',
+                'title' => 'required|string|max:150',
+                'type_id' => 'required',
+                'content' => 'required|max:300',
+                'link' => 'required',
             ],
             [
               //... messaggi di errore
-              'title.required' => 'Il titolo è obbligatorio',
-              'title.string' => 'Il titolo deve essere una stringa',
-              'title.max' => 'Il titolo deve essere lungo max 150 caratteri',
+                'title.required' => 'Il titolo è obbligatorio',
+                'title.string' => 'Il titolo deve essere una stringa',
+                'title.max' => 'Il titolo deve essere lungo max 150 caratteri',
+                'type_id.required' => 'Devi selezionare una categoria',
+                'content.required' => 'La descrizione è obbligatoria',
+                'content.max' => 'Il titolo deve essere lungo max 300 caratteri',
+                'link.required' => 'Il link è obbligatorio',
+            ]
+        )->validate();
 
-              'type_id.required' => 'Devi selezionare una categoria',
-              
-              'content.required' => 'La descrizione è obbligatoria',
-              'content.max' => 'Il titolo deve essere lungo max 300 caratteri',
-              
-              'link.required' => 'Il link è obbligatorio',
-              ]
-          )->validate();
-
-          return $validator;
+        return $validator;
     }
 }

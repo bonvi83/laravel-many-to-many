@@ -6,7 +6,6 @@
         <div class="container">
             <a class="btn btn-primary my-4" href="{{ route('admin.types.index') }}">Torna alla lista</a>
 
-
             <h5>Dettaglio Categoria</h5>
 
             <h1>{{ $type->label }}</h1>
@@ -17,8 +16,8 @@
             <table class="table">
                 <thead>
                     <th>ID</th>
-                    <th>Title</th>
-                    <th>Title</th>
+                    <th>Titolo</th>
+                    <th>blabla bla</th>
                 </thead>
                 <tbody>
                     @foreach ($type->projects as $project)
@@ -30,7 +29,6 @@
                             <a class="btn btn-primary" href="{{ route('admin.types.show', $project) }}">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
-
                         </td>
                     </tr>
                     @endforeach

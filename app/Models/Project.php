@@ -29,4 +29,4 @@ class Project extends Model
     public function getTechArray(){
         return $this->technologies->pluck('id')->toArray();
     }
-}
+};

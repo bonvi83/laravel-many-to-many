@@ -23,4 +23,4 @@ class TechnologySeeder extends Seeder
             $technology->save();
         }
     }
-}
+};
