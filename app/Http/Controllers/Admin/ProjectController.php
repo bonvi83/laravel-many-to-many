@@ -50,6 +50,7 @@ class ProjectController extends Controller
         $project->description = $data["description"];
         $project->date_of_publication = $data["date_of_publication"];
         $project->save();
+        $project->technologies()->attach($data["technologies"]);
         return redirect()->route("projects.show", $project);
     }
 
