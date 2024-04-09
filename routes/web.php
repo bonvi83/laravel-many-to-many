@@ -39,7 +39,7 @@ Route::middleware('auth')
     // rotta risorsa Type
     Route::resource('types', TypeController::class);
 
-    Route::resource('projects', TechnologyController::class);
+    Route::resource('technologies', TechnologyController::class);
   });
 
 require __DIR__ . '/auth.php';
