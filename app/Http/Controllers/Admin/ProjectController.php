@@ -44,15 +44,13 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         // $data = $request->all();
-        $data = $this->validation($request->all());
-
-        $project = new Project;
-
-        $project->fill($data);
-
+        $data = $request->all();
+        $project = new Project();
+        $project->title = $data["title"];
+        $project->description = $data["description"];
+        $project->date_of_publication = $data["date_of_publication"];
         $project->save();
-
-        return redirect()->route('admin.projects.show', $project);
+        return redirect()->route("projects.show", $project);
     }
 
     /**

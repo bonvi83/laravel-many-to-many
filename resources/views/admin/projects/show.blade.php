@@ -13,7 +13,6 @@
             <p><strong>Link al progetto: </strong>{{ $project->link }}</p>
 
             <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-warning my-3">Modifica</a>
-
         </div>
     </section>
 @endsection
