@@ -129,7 +129,6 @@ class ProjectController extends Controller
                 'link.required' => 'Il link è obbligatorio',
             ]
         )->validate();
-
         return $validator;
     }
-}
+};

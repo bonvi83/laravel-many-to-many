@@ -49,12 +49,11 @@
                       <div class="invalid-feedback">
                         {{ $message }}
                       </div>
-                    @enderror  
+                    @enderror
                   </div>
-                
+
                 <button type="submit" class="btn btn-success">Salva</button>
               </form>
-
         </div>
     </section>
 @endsection

@@ -4,7 +4,7 @@
   <section>
     <div class="container">
       <a class="btn btn-primary my-4" href="{{ route('admin.types.index') }}">Torna alla lista</a>
-      
+
       <h1>Form Categoria</h1>
       <form action="{{ route('admin.types.store') }}" class="row" method="POST">
         @csrf
@@ -22,7 +22,6 @@
         <div class="col-12 mt-2">
           <button type="submit" class="btn btn-success">Salva</button>
         </div>
-
       </form>
     </div>
   </section>

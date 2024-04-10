@@ -24,7 +24,8 @@
                     @forelse ($projects as $project)
                         <tr>
                             <td>{{ $project->title }}</td>
-                            <td>{!! $project->type->getBadge() !!}</td> {{-- dietro questa sintassi c'è una JOIN sul db. È possibile grazie alla relazione nei Models --}}
+                            {{-- dietro questa sintassi c'è una JOIN sul db. È possibile grazie alla relazione nei Models --}}
+                            <td>{!! $project->type->getBadge() !!}</td>
                             <td>{{ $project->content }}</td>
                             <td>
                                 <a href="{{ $project->link }}" target="_blank">Link</a>

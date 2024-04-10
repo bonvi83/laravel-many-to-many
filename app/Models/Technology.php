@@ -12,4 +12,4 @@ class Technology extends Model
     {
         return $this->belongsToMany(Project::class);
     }
-}
+};
