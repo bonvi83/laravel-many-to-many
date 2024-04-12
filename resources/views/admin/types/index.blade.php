@@ -60,7 +60,7 @@
                         <p>Sei arrivato ad un punto dove devi scegliere: o tieni {{ $type->label }} o lo cancelli!</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torrabi</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bottone</button>
 
                         <form action="{{ route('admin.types.destroy', $type) }} " method="POST">
                             @csrf
