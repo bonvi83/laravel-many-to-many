@@ -31,22 +31,25 @@ class TypeController extends Controller
     }
 
     public function show(Type $type) {
-        return view('admin.types.show', compact('type'));
+        $related_projects = $type->projects()->paginate(2);
+        return view('admin.types.show', compact('type', 'related_projects'));
     }
 
     public function edit(Type $type) {
+        return view('admin.types.form', compact('type'));
     }
 
     public function update(Request $request, Type $type) {
-
+        $data = $request->all();
+        $type->update($data);
+        return redirect()->route('admin.types.show', $type);
     }
 
     public function destroy(Type $type) {
-
+        foreach ($type->projects as $project) {
+            $project->forceDelete();
+        };
+        $type->delete();
+        return redirect()->back();
     }
-
-    // private function validation($data) {
-
-    // }
-
 }

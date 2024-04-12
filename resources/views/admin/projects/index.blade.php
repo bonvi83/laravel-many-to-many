@@ -17,10 +17,10 @@
                     <th scope="col" class="text-center">Mostra in pagina</th>
                     <th scope="col" class="text-center">Modifica in pagina</th>
                     <th scope="col" class="text-center">Elimina dalla lista</th>
+                    <th colspan="100%"></th>
                 </thead>
 
                 <tbody>
-
                     @forelse ($projects as $project)
                         <tr>
                             <td>{{ $project->title }}</td>
@@ -90,7 +90,6 @@
   </div>
     @endforeach
 @endsection
-
 
 
 {{-- Link cdn font awesome --}}
