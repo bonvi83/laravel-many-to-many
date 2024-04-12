@@ -79,7 +79,6 @@ class ProjectController extends Controller
         return view('admin.projects.edit', compact('project', 'types'));
     }
 
-
     /**
      * Update the specified resource in storage.
      *
@@ -87,6 +86,7 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
     // @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, Project $project)
     {
         // $data = $request->all();
@@ -101,6 +101,7 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
     // @return \Illuminate\Http\Response
      */
+
     public function destroy(Project $project)
     {
         $project->delete();
