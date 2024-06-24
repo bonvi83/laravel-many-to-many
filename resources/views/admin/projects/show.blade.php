@@ -43,7 +43,6 @@
                                 <select name="type_id" id="type_id" class="form-select">
                                     <option value="type_id">Seleziona una categoria</option>
 
-
                                     @foreach ($types as $type)
                                         <option {{ $type->id == old('type_id', $project->type_id) ? 'selected' : '' }}
                                             value="{{ $type->id }}">
